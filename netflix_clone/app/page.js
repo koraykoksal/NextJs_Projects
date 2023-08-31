@@ -17,7 +17,7 @@ export default function Home() {
           </p>
           {/* //? next/link arka planda sayfayı önceden fetch edilir. Bu, client tarafı gezintilerin performansını iyileştirmek için kullanışlıdır. Görünüm alanındaki herhangi bir <Link />  önceden yüklenecektir. */}
           <Link href="/register">
-            <button className="bg-red-700 hover:bg-red-800 rounded-md w-[250px] p-3 mt-3">Get Started</button>
+            <button className="bg-red-700 hover:bg-red-800  rounded-md w-[250px] p-3 mt-3">Get Started</button>
           </Link>
         </div>
       </div>
