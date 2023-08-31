@@ -1,6 +1,10 @@
 import React from 'react'
 
-const MovieDetail = () => {
+const MovieDetail = ({params}) => {
+
+  console.log(params)
+
+
   return (
     <div>MovieDetail</div>
   )
