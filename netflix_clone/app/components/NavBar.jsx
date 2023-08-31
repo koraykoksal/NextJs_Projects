@@ -13,7 +13,8 @@ function classNames(...classes) {
 const NavBar = () => {
 
     const currentUser = { displayName: "Koray Köksal" };
-  console.log(currentUser);
+ 
+    console.log(currentUser)
 
   return (
 
