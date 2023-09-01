@@ -1,4 +1,5 @@
 "use client";
+
 import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
@@ -16,6 +17,7 @@ import {
   toastSuccessNotify,
   toastWarnNotify,
 } from "@/helpers/ToastNotify";
+import { useRouter } from "next/navigation";
 
 export const AuthContext = createContext();
 //* with custom hook
@@ -25,6 +27,9 @@ export const useAuthContext = () => {
 
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(false);
+
+  //* usenavigate alternatifi olarak nextjs de useRouter kullanılır
+  const router=useRouter()
 
   useEffect(() => {
     userObserver();
@@ -43,6 +48,7 @@ const AuthContextProvider = ({ children }) => {
         displayName: displayName,
       });
       toastSuccessNotify("Registered successfully!");
+      router.push("/profile")
       console.log(userCredential);
     } catch (err) {
       toastErrorNotify(err.message);
@@ -61,6 +67,7 @@ const AuthContextProvider = ({ children }) => {
         password
       );
       toastSuccessNotify("Logged in successfully!");
+      router.push("/profile")
       console.log(userCredential);
     } catch (err) {
       toastErrorNotify(err.message);
@@ -70,6 +77,7 @@ const AuthContextProvider = ({ children }) => {
   const logOut = () => {
     signOut(auth);
     toastSuccessNotify("Logged out successfully!");
+    router.push("/")
   };
 
   const userObserver = () => {
@@ -103,6 +111,7 @@ const AuthContextProvider = ({ children }) => {
       .then((result) => {
         console.log(result);
         toastSuccessNotify("Logged in successfully!");
+        router.push("/profile")
       })
       .catch((error) => {
         // Handle Errors here.
