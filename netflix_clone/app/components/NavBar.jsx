@@ -24,9 +24,21 @@ const NavBar = () => {
     <Disclosure as="nav" className="text-white fixed top-0 z-20 w-full">
         <div className={`px-4 md:px-16 py-6 transition duration-500 `}>
           <div className="relative flex items-center justify-between">
-            <Link href="/">
-              <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
-            </Link>
+
+            {
+              currentUser ?
+              (
+                <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
+              ):(
+                
+                <Link href="/">
+                  <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
+                </Link>
+
+              )
+            }
+            
+
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               
               {currentUser && (
@@ -132,60 +144,6 @@ const NavBar = () => {
                       
                       )
                     }
-                    {/* <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          href="/register"
-                          className={classNames(
-                            active ? "bg-gray-100" : "",
-                            "block px-4 py-2 text-sm text-gray-700"
-                          )}
-                        >
-                          Register
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          href="/login"
-                          className={classNames(
-                            active ? "bg-gray-100" : "",
-                            "block px-4 py-2 text-sm text-gray-700"
-                          )}
-                        >
-                          Login
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          href="/profile"
-                          className={classNames(
-                            active ? "bg-gray-100" : "",
-                            "block px-4 py-2 text-sm text-gray-700"
-                          )}
-                        >
-                          Profile
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <span
-                          className={classNames(
-                            active ? "bg-gray-100" : "",
-                            "block px-4 py-2 text-sm text-gray-700 cursor-pointer"
-                          )}
-                          role="button"
-                          onClick={() => logOut()}
-                        >
-                          Log out
-                        </span>
-                      )}
-                    </Menu.Item> */}
 
                     
                   </Menu.Items>
