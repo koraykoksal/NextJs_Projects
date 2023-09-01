@@ -26,7 +26,7 @@ const Register = () => {
     
     e.preventDefault();
 
-    //createUser(info.email, info.password, displayName);
+    createUser(info.email, info.password, displayName);
 
     setInfo({
       firstName: "",
@@ -36,7 +36,7 @@ const Register = () => {
     
   };
 
-  const hadleChange = (e) => {setInfo({ ...info, [e.target.name]: e.target.value })};
+  const hadleChange = (e) => {setInfo({ ...info, [e.target.id]: e.target.value })};
 
 
   const handleProviderLogin = () => {
@@ -55,10 +55,10 @@ const Register = () => {
                 Sign Up
               </h2>
 
-              <div className="flex flex-col z-0 w-full mb-6 group">
-              <label htmlFor="floating_text" >First Name</label>
+              <div className="relative z-0 w-full mb-6 group">
+              
                 <input
-                  name="firstName"
+                  name="floating_text"
                   id="firstName"
                   value={info.firstName}
                   className="peer rounded-sm p-1"
@@ -67,13 +67,13 @@ const Register = () => {
                   placeholder=" "
                   onChange={hadleChange}
                 />
-                
+                <label htmlFor="floating_text" >First Name</label>
               </div>
 
-              <div className="flex flex-col z-0 w-full mb-6 group">
-              <label htmlFor="floating_text">Last Name</label>
+              <div className="relative z-0 w-full mb-6 group">
+             
                 <input
-                  name="lastName"
+                  name="floating_text"
                   id="lastName"
                   value={info.lastName}
                   className="peer rounded-sm p-1"
@@ -82,13 +82,13 @@ const Register = () => {
                   placeholder=" "
                   onChange={hadleChange}
                 />
-                
+                 <label htmlFor="floating_text">Last Name</label>
               </div>
 
-              <div className="flex flex-col z-0 w-full mb-6 group">
-              <label htmlFor="floating_email">Email</label>
+              <div className="relative z-0 w-full mb-6 group">
+              
                 <input
-                  name="email"
+                  name="floating_text"
                   id="email"
                   value={info.email}
                   className="peer rounded-sm p-1"
@@ -97,13 +97,13 @@ const Register = () => {
                   required
                   onChange={hadleChange}
                 />
-                
+                <label htmlFor="floating_text">Email</label>
               </div>
 
-              <div className="flex flex-col z-0 w-full mb-6 group">
-              <label htmlFor="floating_password">Password</label>
+              <div className="relative z-0 w-full mb-6 group">
+              
                 <input
-                  name="password"
+                  name="floating_text"
                   id="password"
                   value={info.password}
                   className="peer rounded-sm p-1"
@@ -112,7 +112,7 @@ const Register = () => {
                   required
                   onChange={hadleChange}
                 />
-                
+                <label htmlFor="floating_password">Password</label>
               </div>
 
 
