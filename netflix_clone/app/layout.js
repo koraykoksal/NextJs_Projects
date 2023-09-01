@@ -1,3 +1,4 @@
+import AuthContextProvider from '@/context/AuthContext'
 import NavBar from './components/NavBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -14,8 +15,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         
+        <AuthContextProvider>
         <NavBar/>
         {children}
+        </AuthContextProvider>
+        
         
         </body>
     </html>
