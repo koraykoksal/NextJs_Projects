@@ -15,10 +15,6 @@ const NavBar = () => {
 
     const {currentUser,logOut} = useContext(AuthContext);
  
-    console.log(currentUser?.displayName)
-
-
-
   return (
 
     <Disclosure as="nav" className="text-white fixed top-0 z-20 w-full">
