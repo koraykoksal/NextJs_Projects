@@ -11,7 +11,7 @@ const MovieSection = async ({ title, type }) => {
 
 
   return (
-    <div className="mb-4">
+    <div className=" mb-5">
       <p className="text-white text-md md:text-xl lg:text-2xl font-semibold mb-4">
         {title}
       </p>

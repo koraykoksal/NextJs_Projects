@@ -11,7 +11,7 @@ const MovieCard = ({ poster_path, vote_average, title, release_date, id }) => {
 
   return (
     <div
-      className="w-40 h-[240px] relative cursor-pointer"
+      className="w-40 h-[240px] mb-5 relative cursor-pointer"
       onClick={() => {
         router.push("movies/" + id);
       }}
