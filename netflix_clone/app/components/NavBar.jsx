@@ -1,9 +1,10 @@
 "use client";
 
-import React from 'react'
+import React, { useContext } from 'react'
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { Fragment } from "react";
+import { AuthContext } from '@/context/AuthContext';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -12,7 +13,7 @@ function classNames(...classes) {
 
 const NavBar = () => {
 
-    const currentUser = { displayName: "Koray Köksal" };
+    const currentUser = useContext(AuthContext);
  
     console.log(currentUser)
 
