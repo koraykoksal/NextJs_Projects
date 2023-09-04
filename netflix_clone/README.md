@@ -36,6 +36,7 @@ There is Firebase Inregration and you can register with your google account.
 
 ## Project Skeleton
 
+```
 Netflix Clone App
 |
 ├── app
@@ -82,7 +83,7 @@ Netflix Clone App
 └── postcss.config.js
 └── tailwind.config.js
 └── yarn.lock
-
+```
 
 
 
