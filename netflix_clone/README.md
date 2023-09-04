@@ -36,7 +36,52 @@ There is Firebase Inregration and you can register with your google account.
 
 ## Project Skeleton
 
-
+Netflix Clone App
+|
+├── app
+│    ├── (private)
+│    │     └── movies
+│    │           └── [movieId]
+│    │                 └── page.jsx
+│    │           └── components
+│    │                 └── HeroSection.jsx
+│    │                 └── MovieCard.jsx
+│    │                 └── MovieSection.jsx
+│    │                 └── VideoSection.jsx
+│    │           └── page.jsx
+│    │     └── profile
+│    │           └── components
+│    │                 └── CardContainer.jsx
+│    │                 └── UserCard.jsx
+│    │           └── page.jsx
+│    ├── (public)
+│    │     └── login
+│    │           └── page.jsx
+│    │     └── register
+│    │           └── page.jsx
+│    ├── components
+│    │     └── NavBar.jsx
+│    ├── globals.css
+│    ├── layout.js
+│    ├── not-found.js
+│    ├── page.js
+├── auth
+|    └── firebase.js
+├── context
+│    └── AuthContext.js
+├── helpers
+│    └── movieFunctions.jsx
+|    └── ToastNotify.jsx
+├── public
+│    └── icons
+│    └── images
+├── .env
+└── jsconfig.json
+└── next.config.js
+└── package.json
+└── postcss.config.js
+└── tailwind.config.js
+└── yarn.lock
 
 
 
