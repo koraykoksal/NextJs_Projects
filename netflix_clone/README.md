@@ -16,6 +16,12 @@ pnpm dev
 ## Live Link
 <a href="https://nextnetflix.vercel.app" target="_blank">Netflix Clone App Live Link</a>
 
+# About Project
+```
+There is Firebase Inregration and you can register with your google account.
+```
+
+
 
 ## Project Skeleton
 
