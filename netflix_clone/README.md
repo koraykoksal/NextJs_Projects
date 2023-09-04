@@ -1,6 +1,17 @@
 # Netflix Clone App With NextJs
 
 
+
+## Packages
+- `firebase`
+- `next`
+- `postcss`
+- `react`
+- `react-dom`
+- `react-toastify`
+- `tailwindcss`
+
+
 ## Getting Started
 
 First, run the development server:
